@@ -1,0 +1,66 @@
+{
+  "info": {
+    "name": "Telematico Wizard API",
+    "description": "Colección de endpoints para el wizard telemático.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Iniciar Wizard Telemático",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer <TOKEN>",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/telematico/wizard/iniciar/",
+          "host": ["{{base_url}}"],
+          "path": ["api", "telematico", "wizard", "iniciar"]
+        }
+      },
+      "response": [
+        {
+          "name": "201 Created",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <TOKEN>",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/telematico/wizard/iniciar/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "telematico", "wizard", "iniciar"]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "body": "{\n  \"id\": 1,\n  \"estado\": \"draft\",\n  \"cables_telematicos\": null,\n  \"codigo\": null,\n  \"cable_electrico\": null,\n  \"elementos_telematicos\": [],\n  \"elementos_electricos\": [],\n  \"creado_en\": \"2025-10-18T10:00:00Z\",\n  \"actualizado_en\": \"2025-10-18T10:00:00Z\"\n}",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
